@@ -71,10 +71,10 @@ const Home = () => {
       } else {
         setIngredients([]);
         setMatchingProducts([]);
-        console.error("No recipes found for the given query.");
+        console.error("No items found for the given query.");
       }
     } catch (err) {
-      console.error("Error fetching recipe details:", err);
+      console.error("Error fetching details:", err);
     }
     setLoading(false);
   };
