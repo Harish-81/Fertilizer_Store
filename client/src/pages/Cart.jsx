@@ -63,7 +63,7 @@ const Cart = () => {
         key: razorpayKey,
         amount: totalPrice * 100,
         currency: "INR",
-        name: "Fertikizer",
+        name: "Fertilizer",
         description: "Purchase from your store",
         handler: async function (response) {
           console.log("Payment Response:", response);
@@ -76,7 +76,7 @@ const Cart = () => {
           }));
 
           try {
-            const res = await axios.post("http://localhost:8080/api/orders", {
+            const res = await axios.post("https://fertilizer-store-backend.onrender.com/api/orders", {
               orderItems: formattedItems, // Send the properly formatted items
               totalPrice,
               userId: user.id, // replace with the current user ID
